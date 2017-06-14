@@ -1,0 +1,72 @@
+CREATE DATABASE Session08
+GO
+USE Session08
+GO
+CREATE TABLE Student
+(
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Name NVARCHAR(50) NOT NULL,
+	Family NVARCHAR(50) NOT NULL,
+	BirthDate DATETIME,
+	--Age INT CHECK(Age >= 18),
+	Age AS (YEAR(GETDATE()) - YEAR(BirthDate)),
+	Email NVARCHAR(50) CHECK(Email LIKE '%@%.__%'),
+	CellPhone NVARCHAR(11) CHECK(CellPhone LIKE '09_________'),
+	CreatedDate DATETIME DEFAULT GETDATE()
+
+)
+GO
+CREATE TABLE Course
+(
+	Id INT IDENTITY,
+	Title NVARCHAR(50) NOT NULL UNIQUE,
+	Code NVARCHAR(10) CHECK(Code LIKE 'CRS-______'),
+	PRIMARY KEY(Id)
+)
+GO
+CREATE TABLE Student_Course
+(
+	CourseId INT FOREIGN KEY REFERENCES Course(Id),
+	StudentId INT,
+	CONSTRAINT PK_StudentCourse PRIMARY KEY(CourseId,StudentId),
+	CONSTRAINT FK_StudentId_Student_Id FOREIGN KEY(StudentId) REFERENCES Student(Id)
+)
+GO
+SELECT s.Name,s.Family, c.Title
+FROM Student s
+INNER JOIN Student_Course sc
+ON s.Id = sc.StudentId
+INNER JOIN Course c
+ON sc.CourseId = c.Id
+GO
+CREATE TABLE Student
+(
+	Id INT PRIMARY KEY,
+	Name NVARCHAR(50) NOT NULL,
+	Family NVARCHAR(50) NOT NULL,
+	BirthDate DATETIME,
+	--Age INT CHECK(Age >= 18),
+	Age AS (YEAR(GETDATE()) - YEAR(BirthDate)),
+	Email NVARCHAR(50) CHECK(Email LIKE '%@%.__%'),
+	CellPhone NVARCHAR(11) CHECK(CellPhone LIKE '09_________'),
+	CreatedDate DATETIME DEFAULT GETDATE()
+
+)
+GO
+CREATE TABLE Course
+(
+	Id INT,
+	Title NVARCHAR(50) NOT NULL UNIQUE,
+	Code NVARCHAR(10) CHECK(Code LIKE 'CRS-______'),
+	PRIMARY KEY(Id)
+)
+GO
+CREATE TABLE Student_Course
+(
+	CourseId INT FOREIGN KEY REFERENCES Course(Id) ON DELETE CASCADE ON UPDATE CASCADE,
+	StudentId INT,
+	CONSTRAINT PK_StudentCourse PRIMARY KEY(CourseId,StudentId),
+	CONSTRAINT FK_StudentId_Student_Id FOREIGN KEY(StudentId) REFERENCES Student(Id) ON DELETE CASCADE ON UPDATE CASCADE
+)
+GO
+

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayDemo", "ArrayDemo\ArrayDemo.csproj", "{7EC34657-7232-461D-8D94-61A11A4ADA01}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookDemo", "PhoneBookDemo\PhoneBookDemo.csproj", "{A7BDA4CA-6905-4400-9868-E72EBDB6C06A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeDemo", "DateTimeDemo\DateTimeDemo.csproj", "{B618B993-F94F-4E46-9FD7-BA72B89205D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPhoneBookDemo", "NewPhoneBookDemo\NewPhoneBookDemo.csproj", "{581DDAE6-118D-4FA0-B2F9-46C3F9D08B40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B618B993-F94F-4E46-9FD7-BA72B89205D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B618B993-F94F-4E46-9FD7-BA72B89205D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B618B993-F94F-4E46-9FD7-BA72B89205D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581DDAE6-118D-4FA0-B2F9-46C3F9D08B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581DDAE6-118D-4FA0-B2F9-46C3F9D08B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581DDAE6-118D-4FA0-B2F9-46C3F9D08B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581DDAE6-118D-4FA0-B2F9-46C3F9D08B40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

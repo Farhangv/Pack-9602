@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-theme-rtl.css" rel="stylesheet" />
+    <link href="/styles/mybootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">کهکشان</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">
+                        <!--<span class="glyphicon glyphicon-home"></span>-->
+                        <span class="fa fa-home"></span>
+                    </a>
+                </li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">دوره ها</a></li>
+                <li  class="active"><a href="#">تماس با ما</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="#">
+                        جان دو
+                        <span class="fa fa-user-circle-o"></span>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+
+                <form action="contact_action.aspx" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="name" class="col-md-3 control-label">نام</label>
+                        <div class="col-md-9">
+                            <input type="text" name="name" id="name" placeholder="نام" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="family" class="col-md-3 control-label">نام خانوادگی</label>
+                        <div class="col-md-9">
+                            <input type="text" name="family" id="family" placeholder="نام خانوادگی" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="col-md-3 control-label">نام کاربری</label>
+                        <div class="col-md-9">
+                            <input type="text" name="username" id="username" placeholder="نام کاربری" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">کلمه عبور</label>
+                        <div class="col-md-9">
+                            <input type="password" name="password" id="password" placeholder="کلمه عبور" class="form-control" />
+                        </div>
+                    </div>
+                    <input type="submit" value="ثبت" class="btn btn-success btn-sm pull-left"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

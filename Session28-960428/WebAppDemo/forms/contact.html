@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-theme-rtl.css" rel="stylesheet" />
+    <link href="/styles/mybootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">کهکشان</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">
+                        <!--<span class="glyphicon glyphicon-home"></span>-->
+                        <span class="fa fa-home"></span>
+                    </a>
+                </li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">دوره ها</a></li>
+                <li  class="active"><a href="#">تماس با ما</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="#">
+                        جان دو
+                        <span class="fa fa-user-circle-o"></span>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+
+                <form action="contact_action.aspx" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="Department" class="col-md-3 control-label">دپارتمان</label>
+                        <div class="col-md-9">
+                            <select name="Department" id="Department" class="form-control" multiple="multiple">
+                                <option value="sales">فروش</option>
+                                <option value="support">پشتیبانی</option>
+                                <option value="financial">مالی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">ایمیل</label>
+                        <div class="col-md-9">
+                            <input type="email" name="email" id="email" placeholder="ایمیل" class="form-control" required="required" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority" class="col-md-3 control-label">اهمیت</label>
+                        <div class="col-md-9">
+                            <input type="number" name="priority" id="priority" 
+                                   min="0" max="10"
+                                   placeholder="اهمیت" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-3 control-label">نام</label>
+                        <div class="col-md-9">
+                            <input type="text" name="name" id="name" placeholder="نام" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="family" class="col-md-3 control-label">نام خانوادگی</label>
+                        <div class="col-md-9">
+                            <input type="text" name="family" id="family" placeholder="نام خانوادگی" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">جنسیت</label>
+                        <div class="col-md-9">
+                            <label for="gender_male">مرد</label>
+                            <input type="radio" name="gender" id="gender_male" value="male" checked />
+                            <label for="gender_female">زن</label>
+                            <input type="radio" name="gender" id="gender_female" value="female" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="col-md-3 control-label">نام کاربری</label>
+                        <div class="col-md-9">
+                            <input type="text" name="username" id="username" placeholder="نام کاربری" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">کلمه عبور</label>
+                        <div class="col-md-9">
+                            <input type="password" name="password" id="password" placeholder="کلمه عبور" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="col-md-3 control-label">پیام</label>
+                        <div class="col-md-9">
+                            <textarea name="message" id="message" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                            <input type="checkbox" name="notifyme" id="notifyme" value="true" />
+                            <label for="notifyme">بعد از دریافت پاسخ مرا از طریق ایمیل با خبر کن</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="ثبت" class="btn btn-success btn-sm pull-left"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

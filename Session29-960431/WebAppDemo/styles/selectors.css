@@ -1,0 +1,107 @@
+﻿@import url(fonts.css);
+/**{
+    border:1px solid #000;
+}*/
+
+body {
+    direction:rtl;
+    font-family: 'Iran Sans Web';
+}
+p{
+    width:600px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    padding:15px 30px;
+    font-size:0.8em;
+    margin:10px auto;
+    text-align:justify;
+    background-color:#808080;
+}
+.breaking-news{
+    background-color:#ff3d3d !important;
+}
+#top-news{
+    background-color:#00ff90;
+}
+
+.breaking-news{
+    background-color:#ffd800 !important;
+}
+p,li{
+    font-weight:700;
+}
+nav li{
+    float:right;
+    list-style:none; 
+    margin: -5px 15px;   
+}
+nav a {
+    text-decoration:none;
+    background-color:#808080;
+    border-radius:5px;
+    padding:8px 15px;
+    color:#fff;
+    width:100px;
+    display:inline-block;
+    text-align:center;
+}
+nav{
+    position:fixed;
+    top:0;
+    right:0;
+    background-color:#464646;
+    border-radius:5px;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+    width:100%;
+    height:65px;
+    display:block;
+    margin:0 auto;
+}
+nav li:first-child a
+{
+    background-color:#00ff90;
+}
+nav a:hover,nav li:first-child a:hover{
+    background-color:#000;
+}
+p:first-child{
+    margin-top:100px;
+}
+table td, table th {
+    border:1px solid #000;
+}
+table{
+    width:80%;
+    margin:50px auto;
+    text-align:center;
+}
+tfoot td{
+    text-align:left;
+    padding:10px;
+}
+tbody tr:nth-child(2n+1){
+    background-color:#ccc;
+}
+p::first-letter{
+    font-size:2.5em;
+    font-weight:700;
+}
+
+/*Session26*/
+a[title]{
+    background-color:green;
+}
+a[href *= 'digikala']
+{
+    color:red;
+}
+a[href $= 'laptop']
+{
+    font-size:3em;
+}
+a[href ^='http']
+{
+    font-family:Tahoma;
+}
+

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme-rtl.css" rel="stylesheet" />
+    <link href="../styles/mybootstrap.css" rel="stylesheet" />
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color:aquamarine;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top:50px;">
+        <select id="location" class="form-control" style="margin-bottom:10px;">
+            <option value="10">سالن ۱</option>
+            <option value="20">سالن ۲</option>
+            <option value="30">سالن ۳</option>
+        </select>
+        <button class="btn btn-success btn-sm btn-block" onclick="addBox()">
+            افزودن
+        </button>
+
+        <div class="col-md-12" id="box-container"></div>
+    </div>
+
+    <script src="EventHandelingDemo.js"></script>
+    <script src="OtherJS.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿@import url(bootstrap-custom.css);
+@import url(PersianFonts.css);
+
+body {
+    font-family: 'Iran Sans Web';
+    direction:rtl;
+}

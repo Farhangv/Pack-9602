@@ -1,0 +1,38 @@
+﻿@model MVCDemo.Models.Student
+
+@{
+    ViewBag.Title = "دانشجوی جدید";
+}
+
+<h2>ایجاد دانشجوی جدید</h2>
+
+
+<form method="post" action="/Students/Create">
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-2">نام</label>
+            <div class="col-md-10">
+                <input type="text" name="Name" id="Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Family" class="control-label col-md-2">نام خانوادگی</label>
+            <div class="col-md-10">
+                <input type="text" name="Family" id="Family" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Age" class="control-label col-md-2">سن</label>
+            <div class="col-md-10">
+                <input type="text" name="Age" id="Age" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ایجاد" class="btn btn-default pull-left" />
+            </div>
+        </div>
+    </div>
+</form>

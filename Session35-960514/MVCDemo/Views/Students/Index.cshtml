@@ -1,0 +1,49 @@
+﻿@using MVCDemo.Models
+@model IEnumerable<Student>
+@{
+    //var students = ViewData["Students"] as List<Student>;
+    var students = ViewBag.Students as List<Student>;
+    ViewBag.Title = "لیست دانشجویان";
+}
+@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+{
+<div class="row">
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+</div>
+}
+<div class="row">
+    <a href="/Students/Create" class="btn btn-xs btn-success pull-left">دانشجوی جدید</a>
+</div>
+<h3>@ViewBag.Title</h3>
+
+<div class="row">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>شناسه</th>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @*@foreach (var student in students)*@
+            @foreach(var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Family</td>
+                    <td>
+                        <a href="/Contacts/ShowStudentContacts/@student.Id"
+                           class="btn btn-success  btn-xs">
+                            <span class="glyphicon glyphicon-list"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

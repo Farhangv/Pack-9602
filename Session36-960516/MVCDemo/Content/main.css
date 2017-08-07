@@ -1,0 +1,23 @@
+﻿@import url(bootstrap-custom.css);
+@import url(PersianFonts.css);
+
+body {
+    font-family: 'Iran Sans Web';
+    direction:rtl;
+}
+
+footer{
+    margin-top:50px;
+    border-top:4px solid #444;
+    background-color:#555;
+    min-height:250px;
+    color:#eee;
+}
+
+aside{
+    border-left: 1px dashed #ccc;
+    min-height:300px;
+}
+footer .copyright{
+    text-align:left;
+}

@@ -1,0 +1,41 @@
+﻿@model MVCDemo.Models.Student
+@{
+    ViewBag.Title = "ویرایش دانشجو";
+}
+
+<h2>@ViewBag.Title</h2>
+<form method="post" action="/Students/Edit">
+    <div class="form-horizontal">
+        <hr />
+        @*<div class="form-group">
+            <label for="Name" class="control-label col-md-2">شناسه</label>
+            <div class="col-md-10">
+                <input type="text" name="Id" id="Id" value="@Model.Id" class="form-control" disabled />
+            </div>
+        </div>*@
+
+        <input type="hidden" name="Id" id="Id" value="@Model.Id"/>
+        @Html.HiddenFor(model => model.RowVersion)
+        @*<input type="hidden" name="RowVersion" id="RowVersion" value="@Model.RowVersion.ToString()" />*@
+
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-2">نام</label>
+            <div class="col-md-10">
+                <input type="text" name="Name" id="Name" value="@Model.Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Family" class="control-label col-md-2">نام خانوادگی</label>
+            <div class="col-md-10">
+                <input type="text" name="Family" id="Family" value="@Model.Family" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ویرایش" class="btn btn-default pull-left" />
+            </div>
+        </div>
+    </div>
+</form>
+

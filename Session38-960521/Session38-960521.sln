@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDemo", "MVCDemo\MVCDemo.csproj", "{9958DA75-7930-4FCE-99A6-A62485F07138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLInjectionDemo", "SQLInjectionDemo\SQLInjectionDemo.csproj", "{BA671F3C-03ED-40BB-8502-A58A2C7AC8C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9958DA75-7930-4FCE-99A6-A62485F07138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9958DA75-7930-4FCE-99A6-A62485F07138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9958DA75-7930-4FCE-99A6-A62485F07138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9958DA75-7930-4FCE-99A6-A62485F07138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA671F3C-03ED-40BB-8502-A58A2C7AC8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA671F3C-03ED-40BB-8502-A58A2C7AC8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA671F3C-03ED-40BB-8502-A58A2C7AC8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA671F3C-03ED-40BB-8502-A58A2C7AC8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

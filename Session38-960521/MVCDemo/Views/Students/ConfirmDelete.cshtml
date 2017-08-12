@@ -1,0 +1,17 @@
+﻿@model MVCDemo.Models.Student
+@{
+    ViewBag.Title = "حذف";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p class="text-danger">
+    آیا از حذف دانش جو @Model.Name @Model.Family اطمینان دارید؟
+</p>
+<a href="/Students/Index" class="btn btn-default">
+    انصراف
+</a>
+
+<a href="/Students/Delete/@Model.Id" class="btn btn-danger">
+    بله، دانشجو را حذف کن
+</a>

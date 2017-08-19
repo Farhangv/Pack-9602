@@ -1,0 +1,27 @@
+﻿@model MVCDemo.Models.Student
+
+<div class="col-md-12 student-box">
+    <h5>@Model.Name @Model.Family</h5>
+    <hr/>
+
+    @if (Model.Photo != null)
+    {
+        <img src="data:image/png;base64,@(Convert.ToBase64String(Model.Photo))" class="img img-circle"/>
+    }
+    <hr/>
+    <a href="/Contacts/ShowStudentContacts/@Model.Id"
+       class="btn btn-success  btn-xs">
+        <span class="glyphicon glyphicon-list"></span>
+    </a>
+    <a href="@Url.Action("ConfirmDelete", "Students", new { id = Model.Id })"
+       class="btn btn-danger btn-xs">
+        <span class="glyphicon glyphicon-remove"></span>
+    </a>
+    @*<a href="/Students/Edit/@student.Id"
+           class="btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a>*@
+    @Html.ActionLink("ویرایش", "Edit", "Students",
+        new { id = Model.Id },
+        new { @class = "btn btn-xs btn-default" })
+</div>

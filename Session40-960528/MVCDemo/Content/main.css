@@ -1,0 +1,42 @@
+﻿@import url(bootstrap-custom.css);
+@import url(PersianFonts.css);
+
+body {
+    font-family: 'Iran Sans Web';
+    direction:rtl;
+}
+
+footer{
+    margin-top:50px;
+    border-top:4px solid #444;
+    background-color:#555;
+    min-height:250px;
+    color:#eee;
+}
+
+aside{
+    border-left: 1px dashed #ccc;
+    min-height:300px;
+}
+footer .copyright{
+    text-align:left;
+}
+[data-val-required]{
+    border-right: 3px red solid;
+}
+
+/*[data-val-required]::before{
+    content: '*';
+}*/
+
+.student-box{
+    border:1px solid #ccc;
+    border-radius:5px;
+    min-height:290px;
+    margin-bottom:20px;
+    text-align:center;
+}
+.student-box img{
+    width:120px;
+    height:120px;
+}

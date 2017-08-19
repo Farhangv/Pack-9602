@@ -1,0 +1,100 @@
+﻿@model MVCDemo.ViewModels.StudentCreateViewModel
+
+@{
+    ViewBag.Title = "دانشجوی جدید";
+}
+
+<h2>ایجاد دانشجوی جدید</h2>
+@Html.ActionLink("بازگشت به لیست","Index","Students",null,  new { @class="btn btn-xs btn-default pull-left", id="return-link" })
+
+@using (Html.BeginForm("Create", "Students", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-horizontal">
+        <hr />
+        <div class="text-danger">
+            @Html.ValidationSummary(false)
+        </div>
+        <div class="form-group">
+            @*@Html.Label("Name","نام", new { @class="control-label col-md-2" })*@
+            @Html.LabelFor(m => m.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "نام" })
+                @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Family, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Family, new { @class = "form-control", placeholder = "نام خانوادگی" })
+                @Html.ValidationMessageFor(m => m.Family, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "ایمیل" })
+                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "تلفن" })
+                @Html.ValidationMessageFor(m => m.Phone, null, new { @class = "text-danger" })
+
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.BirthCertificateNumber, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.BirthCertificateNumber, new { @class = "form-control", placeholder = "شماره شناسنامه", type="number" })
+                @Html.ValidationMessageFor(m => m.BirthCertificateNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "نام کاربری" })
+                @Html.ValidationMessageFor(m => m.Username, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "کلمه عبور" })
+                @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "تکرار کلمه عبور" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PostedPhoto, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*<input type="file" name="PostedPhoto" id="PostedPhoto"/>*@
+                @Html.TextBoxFor(m => m.PostedPhoto, new { @class = "form-control" , type = "file"})
+                @Html.ValidationMessageFor(m => m.PostedPhoto, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Description, new { @class = "form-control", placeholder = "توضیحات" })
+                @Html.ValidationMessageFor(m => m.Description, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ایجاد" class="btn btn-default pull-left" />
+            </div>
+        </div>
+    </div>
+}

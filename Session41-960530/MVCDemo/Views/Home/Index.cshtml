@@ -1,0 +1,20 @@
+﻿<div class="jumbotron" style="min-height:200px;">
+    به وبسایت دوره MCSD خوش آمدید...
+    <br/>
+    @if (ViewBag.User != null)
+    {
+        <text>کاربر گرامی</text>
+
+        @(((MVCDemo.Models.User)ViewBag.User).Username)
+
+        <text>به سایت خوش آمدید</text>
+}
+</div>
+
+@*@section Scripts{
+    <script>
+        $(function () {
+            alert("Document Is Ready");
+        });
+    </script>    
+}*@

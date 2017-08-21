@@ -1,0 +1,25 @@
+﻿@using MVCDemo.Models
+@model IEnumerable<Contact>
+@{
+    ViewBag.Title = "نمایش اطلاعات تماس";
+}
+
+<h2>@ViewBag.Title</h2>
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>اطلاعات تماس</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>
+                    @contact.Value
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

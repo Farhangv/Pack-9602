@@ -1,0 +1,46 @@
+﻿@model MVCDemo.ViewModels.SubmitAssignmentViewModel
+
+@{
+    ViewBag.Title = "ثبت تکلیف";
+}
+
+<h2>@ViewBag.Title</h2>
+@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+{
+    <div class="row">
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    </div>
+}
+@using (Html.BeginForm("SubmitAssignment", "Students", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CourseId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CourseId, null ,new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CourseId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PostedFile, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PostedFile, new { @class = "form-control" , type = "file"} )
+                @Html.ValidationMessageFor(model => model.PostedFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ارسال" class="btn btn-success pull-left" />
+            </div>
+        </div>
+    </div>
+}
+

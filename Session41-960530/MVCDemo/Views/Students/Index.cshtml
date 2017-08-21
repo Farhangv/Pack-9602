@@ -1,0 +1,30 @@
+﻿@using MVCDemo.Models
+@model IEnumerable<Student>
+@{
+    //var students = ViewData["Students"] as List<Student>;
+    var students = ViewBag.Students as List<Student>;
+    ViewBag.Title = "لیست دانشجویان";
+}
+@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+{
+<div class="row">
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+</div>
+}
+<div class="row">
+    <a href="/Students/Create" class="btn btn-xs btn-success pull-left">دانشجوی جدید</a>
+</div>
+<h3>@ViewBag.Title</h3>
+
+<div class="row">
+
+    @foreach(var student in Model)
+    {
+        <div class="col-md-4">
+            @*@Html.Partial("~/Views/Students/_StudentBox.cshtml", student)*@
+            @Html.Action("StudentBox", new { id = student.Id })
+        </div>
+    }
+</div>
